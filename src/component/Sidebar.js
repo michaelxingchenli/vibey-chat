@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
-import db from "./firebase";
+import db from "../firebase";
 import "./Sidebar.scss";
 
 import SidebarChat from "./SidebarChat";
 import { Avatar, IconButton } from "@material-ui/core";
-import DonutLargeIcon from "@material-ui/icons/DonutLarge";
-import ChatIcon from "@material-ui/icons/Chat";
-import MoreVertIcon from "@material-ui/icons/MoreVert";
 import SearchOutlinedIcon from "@material-ui/icons/SearchOutlined";
+import MicIcon from "@material-ui/icons/Mic";
+import HeadsetIcon from "@material-ui/icons/Headset";
+import SettingsIcon from "@material-ui/icons/Settings";
 
-import { useStateValue } from "./StateProvider";
+import { useStateValue } from "../StateProvider";
 
 const Sidebar = () => {
   const [rooms, setRooms] = useState([]);
@@ -31,20 +31,6 @@ const Sidebar = () => {
 
   return (
     <div className="sidebar">
-      <div className="sidebar__header">
-        <Avatar src={user?.photoURL} />
-        <div className="sidebar__headerRight">
-          <IconButton>
-            <DonutLargeIcon />
-          </IconButton>
-          <IconButton>
-            <ChatIcon />
-          </IconButton>
-          <IconButton>
-            <MoreVertIcon />
-          </IconButton>
-        </div>
-      </div>
       <div className="sidebar__search">
         <div className="sidebar__searchContainer">
           <SearchOutlinedIcon />
@@ -57,6 +43,21 @@ const Sidebar = () => {
         {rooms.map((room) => (
           <SidebarChat key={room.id} id={room.id} name={room.data.name} />
         ))}
+      </div>
+
+      <div className="sidebar__footer">
+        <Avatar src={user?.photoURL} />
+        <div className="sidebar__footerRight">
+          <IconButton>
+            <MicIcon />
+          </IconButton>
+          <IconButton>
+            <HeadsetIcon />
+          </IconButton>
+          <IconButton>
+            <SettingsIcon />
+          </IconButton>
+        </div>
       </div>
     </div>
   );

@@ -1,13 +1,17 @@
+@import "./../util/variables.scss";
+
 .sidebar {
   flex: 0.35;
+  max-width: 250px;
   flex-direction: column;
   display: flex;
+  color: white;
 }
 
 .sidebar__search {
   display: flex;
   align-items: center;
-  background-color: #f6f6f6;
+  background-color: $backgroundColorDark;
   height: 39px;
   padding: 10px;
 }
@@ -15,14 +19,18 @@
 .sidebar__searchContainer {
   display: flex;
   align-items: center;
-  background-color: white;
+  background-color: $backgroundColor;
   width: 100%;
   height: 35px;
   border-radius: 20px;
 
   & > input {
     border: none;
+    background-color: transparent;
     margin-left: 10px;
+    color: white;
+    outline: 0;
+    caret-color: white;
   }
 
   & > .MuiSvgIcon-root {
@@ -30,23 +38,28 @@
   }
 }
 
-.sidebar__header {
+.sidebar__footer {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
-  border-right: 1px solid lightgray;
+  align-items: center;
+  padding: 8px;
+  background-color: $backgroundColorDarker;
 }
 
-.sidebar__headerRight {
+.sidebar__footerRight {
   display: flex;
   align-items: center;
   justify-content: space-between;
   min-width: 10vw;
+
+  & > .MuiIconButton-root {
+    color: white;
+  }
 }
 
-.sidebar__headerRight > .MuiSvgIcon-root {
+.sidebar__footerRight > .MuiSvgIcon-root {
   margin-right: 2vw;
-  font-size: 24px !important;
+  font-size: 24px;
 }
 
 .sidebar__chats {

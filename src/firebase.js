@@ -1,14 +1,14 @@
 import firebase from "firebase";
 
 const config = {
-  apiKey: "AIzaSyB1TCgPqj_zW06MuZAQEhjaqaTDwrzxagQ",
-  authDomain: "chatter-67fe3.firebaseapp.com",
-  databaseURL: "https://chatter-67fe3.firebaseio.com",
-  projectId: "chatter-67fe3",
-  storageBucket: "chatter-67fe3.appspot.com",
-  messagingSenderId: "199080480777",
-  appId: "1:199080480777:web:239ab17e928f8a099be8d8",
-  measurementId: "G-B88PP952V7",
+  apiKey: "AIzaSyDuQ1l5VTcFcC1MS4muHr8y-8zhBCssUb8",
+  authDomain: "vibey-chat.firebaseapp.com",
+  databaseURL: "https://vibey-chat.firebaseio.com",
+  projectId: "vibey-chat",
+  storageBucket: "vibey-chat.appspot.com",
+  messagingSenderId: "455813846997",
+  appId: "1:455813846997:web:ad7a7f0d41d60f7fc98f5c",
+  measurementId: "G-TN8185N7WL",
 };
 
 const firebaseApp = firebase.initializeApp(config);

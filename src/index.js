@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.scss";
-import App from "./App";
+import App from "./component/App";
 import reducer, { initialState } from "./reducer";
 import { StateProvider } from "./StateProvider";
 

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import PropTypes from "prop-types";
 import { Avatar } from "@material-ui/core";
-import db from "./firebase";
+import db from "../firebase";
 import "./SidebarChat.scss";
 
 function SidebarChat({ id, name, addNewChat }) {
@@ -42,11 +42,15 @@ function SidebarChat({ id, name, addNewChat }) {
     </Link>
   ) : (
     <div onClick={createChat} className="sidebarChat">
-      <h2>Add new Chat</h2>
+      <h3>Create New Channel</h3>
     </div>
   );
 }
 
-SidebarChat.propTypes = {};
+SidebarChat.propTypes = {
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  addNewChat: PropTypes.bool.isRequired,
+};
 
 export default SidebarChat;
